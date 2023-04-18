@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 13vh;
+    width: 100vw;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    /* background: linear-gradient(180deg, #000000 55.94%, rgba(0, 0, 0, 0) 100%); */
+    background-color: #1E1E1E;
+    box-shadow: 0 -14px 25px 50px #1e1e1e;
+    color: white;
+    overflow: hidden;
+    align-items: center;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header div ul {
+    display: flex;
+    list-style: none;
+}
+
+header div ul li{
+    margin: 0 1.1rem;
+    padding: 0.6rem 2rem;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+header div ul li:hover{
+    transition: 0.3s ease-in-out;
+    background-color: #5858AF;
+    border-radius: 1.5rem;
+}
+
+#mobile {
+    display: none;
+}
+
+
+@media screen and ( max-width:769px ){
+    header ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 200px;
+        right: -400px;
+        width: 300px;
+        height: 100vh;
+        background-color: #1E1E1E;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.65);
+        padding: 40px 0 0 10px;
+    }
+
+    header ul.active {
+        right: 0px;
+    }
+
+    header ul li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    #mobile i {
+        font-size: 100px;
+        cursor: pointer;
+    }
+
+}
+
